@@ -2,6 +2,7 @@ const { application } = require("express");
 const Values = require("../models/Values");
 
 exports.saveValues = async (req, res) => {
+  console.log(req.body)
     try {
         const ValuesInstance = new Values(req.body)
         const saveResult = await ValuesInstance.save()

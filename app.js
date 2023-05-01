@@ -16,6 +16,7 @@ async function main() {
 }
 
 
+app.use(express.json()); 
 app.use("/",Values);
 
 main()
