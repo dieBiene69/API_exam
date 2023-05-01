@@ -20,7 +20,9 @@ async function main() {
 
 app.use(express.json()); 
 app.use("/",Values);
-app.use(cors());
+app.use(cors({
+  origin: true
+}));
 
 main()
   .then(() => {
