@@ -1,6 +1,5 @@
 const { application } = require("express");
 const Values = require("../models/Values");
-const Values = require("../models/Values");
 
 //only the last 24hours!
 
