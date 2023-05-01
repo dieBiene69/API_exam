@@ -1,5 +1,15 @@
 const { application } = require("express");
 const Values = require("../models/Values");
+const Values = require("../models/Values");
+
+//only the last 24hours!
+
+const today = newDate ()
+const twentyFourHoursAgo = newDate(today.getTime() -24 * 60 * 60 * 1000);
+
+const Values = await Values.find({
+  timestamp: {$gte : twentyFourHoursAgo},
+})
 
 exports.saveValues = async (req, res) => {
   console.log(req.body)
