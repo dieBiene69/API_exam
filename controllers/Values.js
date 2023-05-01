@@ -5,7 +5,7 @@ const Values = require("../models/Values");
 
 const today = newDate ();
 const twentyFourHoursAgo = newDate(today.getTime() -24 * 60 * 60 * 1000);
-const allValues = await Values.find({timestamp: { $gte : twentyFourHoursAgo} });
+const Values = await Values.find({timestamp: { $gte : twentyFourHoursAgo} });
 
 exports.saveValues = async (req, res) => {
   console.log(req.body)
