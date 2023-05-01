@@ -4,7 +4,7 @@ const Values = require("../models/Values");
 //last 24h
 const today = new Date();
 const twentyFourHoursAgo = new Date(today.getTime() - 24 * 60 * 60 * 1000);
-const Values = await Values.find({
+const values24h = await Values.find({
   date: { $gte: twentyFourHoursAgo },
 });
 
