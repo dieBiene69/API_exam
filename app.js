@@ -2,6 +2,7 @@ const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
 const morgan = require("morgan")
+const cors = require("cors");
 
 const Values = require("./routes/Values")
 
@@ -16,8 +17,10 @@ async function main() {
 }
 
 
+
 app.use(express.json()); 
 app.use("/",Values);
+app.use(cors());
 
 main()
   .then(() => {
